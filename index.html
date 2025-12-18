@@ -2,81 +2,25 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>GENESIS TREE | Timeline</title>
-    <style>
-        body { background: #0f0f0f; color: #00ff99; font-family: 'Courier New', monospace; padding: 50px; margin-bottom: 100px; }
-        h1 { border-bottom: 2px solid #00ff99; display: inline-block; }
-        
-        /* Шкала времени в стиле 3D Maya */
-        .timeline-container {
-            position: fixed; bottom: 0; left: 0; width: 100%;
-            background: #1a1a1a; border-top: 2px solid #333;
-            padding: 10px 0; display: flex; flex-direction: column; align-items: center;
-        }
-        .timeline-slider {
-            width: 90%; height: 20px; background: #333; position: relative;
-            cursor: pointer; border-radius: 10px;
-        }
-        .keyframe {
-            position: absolute; top: 0; width: 4px; height: 100%; background: #00ff99;
-            box-shadow: 0 0 5px #00ff99;
-        }
-        .labels {
-            display: flex; justify-content: space-between; width: 90%;
-            margin-top: 5px; font-size: 0.8em; color: #666;
-        }
-        .current-layer { color: #ff00ff; font-weight: bold; margin-bottom: 5px; }
-    </style>
+    <title>GENESIS TREE - SIGADEFA</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>GENESIS TREE</h1>
-    <div class="content-box">
-        <h3><div class="pulse-indicator"></div> СОСТОЯНИЕ RUN (ПОТОК)</h3>
-        <p>Система находится в активном цикле дыхания.</p>
-        
-        <h3>ИНДИКАТОР GIFT (ОБМЕН)</h3>
-        <div class="gift-line"><div class="gift-particle"></div></div>
-        <p style="font-size: 0.8em; color: #666;">Обмен данными между CANON и PROJECTS стабилен.</p>
-    </div>
-    <div class="content-box">
-        <h3><div class="pulse-indicator"></div> СОСТОЯНИЕ RUN (ПОТОК)</h3>
-        <p>Система находится в активном цикле дыхания.</p>
-        
-        <h3>ИНДИКАТОР GIFT (ОБМЕН)</h3>
-        <div class="gift-line"><div class="gift-particle"></div></div>
-        <p style="font-size: 0.8em; color: #666;">Обмен данными между CANON и PROJECTS стабилен.</p>
-    </div>
-    <p>Статус: <strong>ON-GOING EVOLUTION</strong></p>
-    
-    <div class="content">
-        <p>> Хронология изменений активирована.</p>
-        <p>> Слои: ARCHIVE -> MAIN -> DEV</p>
-    </div>
+    <header>
+        <h1>GENESIS TREE</h1>
+        <nav class="mode-switch">
+            <button onclick="changeMode('science')">НАУЧНЫЙ</button>
+            <button onclick="changeMode('philosophy')">ФИЛОСОФСКИЙ</button>
+            <button onclick="changeMode('kids')">ДЕТСКИЙ</button>
+        </nav>
+    </header>
 
-    <div class="timeline-container">
-        <div class="current-layer">ТЕКУЩИЙ СЛОЙ: DEV (В РАЗРАБОТКЕ)</div>
-        <div class="timeline-slider">
-            <div class="keyframe" style="left: 10%;" title="Archive 2"></div>
-            <div class="keyframe" style="left: 30%;" title="Archive 1"></div>
-            <div class="keyframe" style="left: 60%;" title="Main (Stable)"></div>
-            <div class="keyframe" style="left: 90%; background: #ff00ff;" title="Current Dev"></div>
-        </div>
-        <div class="labels">
-            <span>Past</span>
-            <span>Present (Now)</span>
-            <span>Future (Seeds)</span>
-        </div>
-    </div>
-    <div class="content-box" style="border-color: #ff00ff; background: rgba(255, 0, 255, 0.05);">
-        <h2 style="color: #ff00ff;">УПРАВЛЕНИЕ ПОТОКОМ</h2>
-        <p>Для синхронизации с GitHub (SIGADEFA_GIT) запусти файл <code>.\SYNC.ps1</code> в PowerShell.</p>
-        <button onclick="alert('Скрипт SYNC.ps1 запущен локально. Проверь консоль PowerShell.')" 
-                style="background: #ff00ff; color: white; border: none; padding: 15px 30px; font-weight: bold; cursor: pointer;">
-            СИНХРОНИЗИРОВАТЬ СЕЙЧАС
-        </button>
-    </div>
+    <main class="content-box">
+        <h2>Состояние Системы</h2>
+        <p>Добро пожаловать в корень фрактального дерева SIGADEFA.</p>
+        <div class="pulse-indicator"></div>
+    </main>
+
+    <script src="mode-system.js"></script>
 </body>
 </html>
-
-
-
