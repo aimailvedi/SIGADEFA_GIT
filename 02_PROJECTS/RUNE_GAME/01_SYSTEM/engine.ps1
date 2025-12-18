@@ -1,16 +1,22 @@
-﻿# ENGINE.PS1 - Соединение RUN и SEED
-Function Start-GenesisLoop {
+﻿Function Start-GenesisLoop {
     Write-Host "--- СЕРДЦЕ СИСТЕМЫ ЗАПУЩЕНО (RUN) ---" -ForegroundColor Yellow
     
-    # Эмуляция цикла (выполняется 3 такта для теста)
-    for ($i=1; $i -le 3; $i++) {
+    # Считаем количество SEEDS для определения темпа (Усиление Пульса)
+    $seedsCount = (Get-ChildItem -Path "D:\GENESIS_TREE\05_SEEDS" -File -Recurse).Count
+    if ($seedsCount -lt 1) { $seedsCount = 1 }
+    $speed = 1 / $seedsCount # Чем больше семян, тем быстрее такт
+    
+    Write-Host "Мощность Пульса: $seedsCount (Интервал: $speed сек)" -ForegroundColor Cyan
+
+    for ($i=1; $i -le 5; $i++) {
         $timestamp = Get-Date -Format "HH:mm:ss"
-        Write-Host "[$timestamp] Такт $i: Проверка состояния клеток..." -ForegroundColor Gray
+        # Используем ${}, чтобы избежать конфликта с дисками (исправляем ошибку)
+        Write-Host "[${timestamp}] Такт ${i}: Проверка фрактальных слоев..." -ForegroundColor Gray
         
-        # Здесь RUN касается SEED
-        $seed = "RUNE_BASE_STRIKE" # Пример сжатой команды
-        Write-Host "  -> Активация SEED: $seed" -ForegroundColor Cyan
-        Start-Sleep -Seconds 1
+        $seed = "RUNE_BASE_STRIKE"
+        Write-Host "  -> Активация SEED: ${seed}" -ForegroundColor DarkCyan
+        
+        Start-Sleep -Seconds $speed
     }
     Write-Host "--- ЦИКЛ ЗАВЕРШЕН ---" -ForegroundColor Green
 }

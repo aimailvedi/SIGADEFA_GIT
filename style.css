@@ -49,3 +49,55 @@ button {
 }
 button:hover { background: var(--accent-color); color: var(--bg-color); }
 .content-box { border: 1px solid var(--accent-color); padding: 20px; margin-top: 20px; border-radius: 8px; }
+/* Анимация Руны RUN (Пульс) */
+@keyframes run-pulse {
+    0% { transform: scale(1); opacity: 0.8; box-shadow: 0 0 5px var(--accent-color); }
+    50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 20px var(--accent-color); }
+    100% { transform: scale(1); opacity: 0.8; box-shadow: 0 0 5px var(--accent-color); }
+}
+
+.pulse-indicator {
+    width: 15px; height: 15px; background: var(--accent-color);
+    border-radius: 50%; display: inline-block; margin-right: 10px;
+    animation: run-pulse 2s infinite ease-in-out;
+}
+
+/* Визуализация GIFT (Синаптические связи) */
+.gift-line {
+    height: 2px; background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    margin: 10px 0; position: relative; overflow: hidden;
+}
+.gift-particle {
+    position: absolute; width: 10px; height: 100%; background: #fff;
+    filter: blur(2px); animation: gift-flow 3s infinite linear;
+}
+@keyframes gift-flow {
+    0% { left: -10%; }
+    100% { left: 110%; }
+}
+/* Анимация Руны RUN (Пульс) */
+@keyframes run-pulse {
+    0% { transform: scale(1); opacity: 0.8; box-shadow: 0 0 5px var(--accent-color); }
+    50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 20px var(--accent-color); }
+    100% { transform: scale(1); opacity: 0.8; box-shadow: 0 0 5px var(--accent-color); }
+}
+
+.pulse-indicator {
+    width: 15px; height: 15px; background: var(--accent-color);
+    border-radius: 50%; display: inline-block; margin-right: 10px;
+    animation: run-pulse 2s infinite ease-in-out;
+}
+
+/* Визуализация GIFT (Синаптические связи) */
+.gift-line {
+    height: 2px; background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    margin: 10px 0; position: relative; overflow: hidden;
+}
+.gift-particle {
+    position: absolute; width: 10px; height: 100%; background: #fff;
+    filter: blur(2px); animation: gift-flow 3s infinite linear;
+}
+@keyframes gift-flow {
+    0% { left: -10%; }
+    100% { left: 110%; }
+}
