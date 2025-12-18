@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>GENESIS TREE | Timeline</title>
+    <style>
+        body { background: #0f0f0f; color: #00ff99; font-family: 'Courier New', monospace; padding: 50px; margin-bottom: 100px; }
+        h1 { border-bottom: 2px solid #00ff99; display: inline-block; }
+        
+        /* Шкала времени в стиле 3D Maya */
+        .timeline-container {
+            position: fixed; bottom: 0; left: 0; width: 100%;
+            background: #1a1a1a; border-top: 2px solid #333;
+            padding: 10px 0; display: flex; flex-direction: column; align-items: center;
+        }
+        .timeline-slider {
+            width: 90%; height: 20px; background: #333; position: relative;
+            cursor: pointer; border-radius: 10px;
+        }
+        .keyframe {
+            position: absolute; top: 0; width: 4px; height: 100%; background: #00ff99;
+            box-shadow: 0 0 5px #00ff99;
+        }
+        .labels {
+            display: flex; justify-content: space-between; width: 90%;
+            margin-top: 5px; font-size: 0.8em; color: #666;
+        }
+        .current-layer { color: #ff00ff; font-weight: bold; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <h1>GENESIS TREE</h1>
+    <p>Статус: <strong>ON-GOING EVOLUTION</strong></p>
+    
+    <div class="content">
+        <p>> Хронология изменений активирована.</p>
+        <p>> Слои: ARCHIVE -> MAIN -> DEV</p>
+    </div>
+
+    <div class="timeline-container">
+        <div class="current-layer">ТЕКУЩИЙ СЛОЙ: DEV (В РАЗРАБОТКЕ)</div>
+        <div class="timeline-slider">
+            <div class="keyframe" style="left: 10%;" title="Archive 2"></div>
+            <div class="keyframe" style="left: 30%;" title="Archive 1"></div>
+            <div class="keyframe" style="left: 60%;" title="Main (Stable)"></div>
+            <div class="keyframe" style="left: 90%; background: #ff00ff;" title="Current Dev"></div>
+        </div>
+        <div class="labels">
+            <span>Past</span>
+            <span>Present (Now)</span>
+            <span>Future (Seeds)</span>
+        </div>
+    </div>
+</body>
+</html>
