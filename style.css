@@ -1,0 +1,51 @@
+﻿:root {
+    --bg-color: #0f0f0f;
+    --accent-color: #00ff99;
+    --text-color: #e0e0e0;
+    --font-main: 'Courier New', monospace;
+}
+
+body[data-mode="scientific"] {
+    --bg-color: #0a0e14;
+    --accent-color: #00d4ff;
+    --text-color: #b3c7d6;
+    --font-main: 'Consolas', monospace;
+}
+
+body[data-mode="philosophical"] {
+    --bg-color: #1a1a15;
+    --accent-color: #d4af37;
+    --text-color: #f5f5dc;
+    --font-main: 'Georgia', serif;
+}
+
+body[data-mode="child"] {
+    --bg-color: #fffaf0;
+    --accent-color: #ff6b6b;
+    --text-color: #2f4f4f;
+    --font-main: 'Comic Sans MS', cursive;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    transition: all 0.5s ease;
+    padding: 40px;
+}
+
+.header { border-bottom: 2px solid var(--accent-color); padding-bottom: 20px; margin-bottom: 30px; }
+.logo { font-size: 2.5em; font-weight: bold; color: var(--accent-color); text-shadow: 0 0 10px var(--accent-color); }
+.nav-buttons { margin: 20px 0; }
+button {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s;
+}
+button:hover { background: var(--accent-color); color: var(--bg-color); }
+.content-box { border: 1px solid var(--accent-color); padding: 20px; margin-top: 20px; border-radius: 8px; }

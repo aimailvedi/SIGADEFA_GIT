@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>GENESIS TREE | Архитектор</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-mode="scientific">
+    <div class="header">
+        <div class="logo">GENESIS_ORIGIN</div>
+        <p>Система Живого Дерева | Инстанс: Архитектор</p>
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="setMode('scientific')">НАУЧНЫЙ</button>
+        <button onclick="setMode('philosophical')">ФИЛОСОФСКИЙ</button>
+        <button onclick="setMode('child')">ДЕТСКИЙ</button>
+    </div>
+
+    <div class="content-box" id="main-content">
+        <h1>Добро пожаловать в Точку Сборки</h1>
+        <p>Выберите режим для синхронизации когнитивного слоя.</p>
+        <p>Текущий статус: <strong>Слой 1-3 Активен</strong></p>
+    </div>
+
+    <script>
+        function setMode(mode) {
+            document.body.setAttribute('data-mode', mode);
+            localStorage.setItem('genesis-mode', mode);
+            console.log('Режим изменен на: ' + mode);
+        }
+        // Восстановление режима при загрузке
+        const savedMode = localStorage.getItem('genesis-mode');
+        if (savedMode) setMode(savedMode);
+    </script>
+</body>
+</html>
